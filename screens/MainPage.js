@@ -8,12 +8,17 @@ import {
   StatusBar,
 } from 'react-native';
 
+import {API_KEY} from "@env";
+
+
 const MainPage = () => {
   const test = () => {
-    var XMLHttpRequest = require('xhr2');
-    var xhr = new XMLHttpRequest();
-    var url =
-      'http://openapi.seoul.go.kr:8088/sample/xml/CardSubwayStatsNew/1/5/20220301'; /*URL*/
+    const XMLHttpRequest = require('xhr2');
+    const xhr = new XMLHttpRequest();
+    const apiKEY = process.env.EXPO_PUBLIC_API_KEY;
+
+    const url =
+      `http://openAPI.seoul.go.kr:8088/${apiKEY}/json/ListNecessariesPricesService/1/5/하나로마트`; /*URL*/
     xhr.open('GET', url);
     xhr.onreadystatechange = function () {
       if (this.readyState == xhr.DONE) {
