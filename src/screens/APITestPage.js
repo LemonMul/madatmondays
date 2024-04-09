@@ -11,7 +11,7 @@ import {
 import {API_KEY} from "@env";
 
 
-const MainPage = () => {
+const APITestPage = () => {
   const test = () => {
     const XMLHttpRequest = require('xhr2');
     const xhr = new XMLHttpRequest();
@@ -48,4 +48,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default APITestPage;
